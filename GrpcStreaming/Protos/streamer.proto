@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+option csharp_namespace = "GrpcStreaming";
+
+package GrpcStreaming;
+
+// The greeting service definition.
+ 
+service StreamService{
+ rpc StartStreaming(stream .GrpcStreaming.StrameMessage) returns (stream .GrpcStreaming.StrameMessage);
+
+}
+
+message StrameMessage{
+	string username =1;
+	string message = 2;
+}
